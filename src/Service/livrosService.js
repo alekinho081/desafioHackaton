@@ -8,5 +8,4 @@ const postaLivro = (data) =>{
         }
 }
 
-
 export default postaLivro

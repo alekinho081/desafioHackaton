@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './Components/Layout';
 import Home from './Pages/Home'
 import Cadastro from './Pages/Cadastro'
+import  Reserva  from './Pages/Reserva';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <Route index element={<Home />} />
       <Route path='/livros' element={<Cadastro />} />
+      <Route path='/reserva' element={<Reserva />}/>
 
 
       </Route>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import postaLivro from '../Service/postLivro';
+import postaLivro from '../Service/livrosService';
 
 const Cadastro = () => {
     const [formData, setFormData] = useState({
