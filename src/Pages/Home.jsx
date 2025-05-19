@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import LivroCard from "../Components/LivroCard";
 
 const Home = () => {
     const [livros, setLivros] = useState([]);
@@ -21,15 +22,7 @@ const Home = () => {
 
     return (
         <center>
-            <div>
-                {livros.map((livro) => (
-                    <div key={livro.id} style={{ border: 'solid 1px', width: '500px', height: '70px', marginTop:'10px', marginBottom:'5px' }}>
-                        <p>Titulo: {livro.name}</p>
-                        <p>Descrição: {livro.descricao}</p>
-                        <p>Local: {livro.local}</p>
-                    </div>
-                ))}
-            </div>
+            <LivroCard livros={livros}/>
         </center>
 
     );
