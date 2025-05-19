@@ -1,19 +1,18 @@
 import React from "react";
+import styles from "../Css/LivroCard.module.css";
 
-const LivroCard = (books) => {
-    const livros = books.livros
-
-    return (
-        <div>
-            {livros.map((livro) => (
-                <div key={livro.id} style={{ border: 'solid 1px', width: '500px', height: '70px', marginTop: '10px', marginBottom: '5px' }}>
-                    <p>Titulo: {livro.name}</p>
-                    <p>Descrição: {livro.descricao}</p>
-                    <p>Local: {livro.local}</p>
-                </div>
-            ))}
+const LivroCard = ({ livros }) => {
+  return (
+    <div className={styles.cardContainer}>
+      {livros.map((livro) => (
+        <div key={livro.id} className={styles.card}>
+          <p className={styles.title}>Título: {livro.name}</p>
+          <p className={styles.description}>Descrição: {livro.descricao}</p>
+          <p className={styles.location}>Local: {livro.local}</p>
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default LivroCard
+export default LivroCard;
